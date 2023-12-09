@@ -6,7 +6,24 @@ import Audience from '../../../assets/icons/audience.svg'
 import User from '../../../assets/icons/user.svg'
 import Films from '../../../assets/icons/films.svg'
 
-export const CardPlanet = () => {
+interface ICardProps {
+  name: string
+  // rotation_period: string
+  // orbital_period: string
+  // diameter: string
+  climate: string
+  // gravity: string
+  terrain: string
+  // surface_water: string
+  population: string
+  // residents: Array<string>
+  // films: Array<string>
+  // created: string
+  // edited: string
+  // url: string
+}
+
+export const CardPlanet = ({ name, climate, terrain, population }: ICardProps) => {
   return (
     <S.Wrapper>
       <S.Contianer>
@@ -16,22 +33,22 @@ export const CardPlanet = () => {
             <img src={Planet} alt="" />
             <div className='planet-text'>
               <p>Planet:</p>
-              <h3>Tatooine</h3>
+              <h3>{name}</h3>
             </div>
           </S.ContentPlanet>
 
           <S.Description>
             <S.Item>
               <img src={Thermometer} alt="" />
-              <p>Climate: <span>Arid</span></p>
+              <p>Climate: <span>{climate}</span></p>
             </S.Item>
             <S.Item>
               <img src={Montain} alt="" />
-              <p>Terrain: <span>Desert</span></p>
+              <p>Terrain: <span>{terrain}</span></p>
             </S.Item>
             <S.Item>
               <img src={Audience} alt="" />
-              <p>Population: <span>20000</span></p>
+              <p>Population: <span>{population}</span></p>
             </S.Item>
           </S.Description>
         </S.Header>
@@ -43,7 +60,8 @@ export const CardPlanet = () => {
           </S.Title>
 
           <S.People>
-            <span>spaneople01,People01,People01,People01,People01,
+            <span>
+              spaneople01,People01,People01,People01,People01,
               People01,People01,People01,People01,People01,People01,
             </span>
           </S.People>

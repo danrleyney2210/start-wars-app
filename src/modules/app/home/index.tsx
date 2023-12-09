@@ -1,4 +1,5 @@
 import * as S from './styles'
+import Api from 'service/api'
 import Planet from '../../../assets/image/planet.png'
 import Search from '../../../assets/svg/search.svg'
 import Weapon from '../../../assets/svg/Weapon.svg'
@@ -12,29 +13,33 @@ import { Input } from 'components/atomos/Input'
 import { CardPlanet } from 'components/molecules/CardPlanet'
 import { Loading } from 'components/atomos/Loading'
 import { useState } from 'react'
-import Api from 'service/api'
 import { Footer } from 'components/molecules/Footer'
 import { toast } from 'react-toastify'
+import { IPlanet } from './types'
 
 export const Home = () => {
   const [load, setLoad] = useState(false)
-  const [data, setData] = useState<String | null>()
+  const [data, setData] = useState<IPlanet | null>()
   const [nameSearch, setNameSearch] = useState('')
 
   async function search() {
     try {
       setLoad(true)
-      const response = await Api.get('/planets/1')
-      if (response.data) {
-        toast.success("Planeta encontrado!")
-        setData(response.data)
-        setLoad(false)
-        return
+      const allPlanets = await Api.get('/planets')
+      if (allPlanets.data) {
+        const planet = allPlanets.data.results.find((planet: IPlanet) => planet.name === nameSearch)
+        if (planet) {
+          toast.success("Planeta encontrado!")
+          setData(planet)
+          setLoad(false)
+        } else {
+          toast.error("Planeta não encontrado, tente novamente!")
+          setLoad(false)
+        }
       }
     } catch (error) {
       setLoad(false)
-      toast.error("Planeta não encontrado, tente novamente!")
-      console.error(error)
+      toast.error('Algun erro inesperado, tente novamente!');
     }
   }
 
@@ -51,7 +56,12 @@ export const Home = () => {
         {
           data ? (
             <S.SearchResult>
-              <CardPlanet />
+              <CardPlanet
+                name={data.name}
+                climate={data.climate}
+                terrain={data.terrain}
+                population={data.population}
+              />
               <S.ArrowBack onClick={() => setData(null)}>
                 <img src={ArrowLeft} alt="" />
                 <span>Voltar</span>
