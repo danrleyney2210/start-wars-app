@@ -1,5 +1,4 @@
 import * as S from './styles'
-import Logo from '../../../assets/svg/logo.svg'
 import Planet from '../../../assets/image/planet.png'
 import Search from '../../../assets/svg/search.svg'
 import Weapon from '../../../assets/svg/Weapon.svg'
@@ -8,12 +7,14 @@ import Arrow from '../../../assets/icons/arrowDown.svg'
 import StartWars from '../../../assets/svg/starWars.svg'
 import ArrowLeft from '../../../assets/icons/arrowLeft.svg'
 
-import { Button } from 'components/Button'
-import { Input } from 'components/Input'
-import { CardPlanet } from 'components/CardPlanet'
-import { Loading } from 'components/Loading'
+import { Button } from 'components/atomos/Button'
+import { Input } from 'components/atomos/Input'
+import { CardPlanet } from 'components/molecules/CardPlanet'
+import { Loading } from 'components/atomos/Loading'
 import { useState } from 'react'
 import Api from 'service/api'
+import { Footer } from 'components/molecules/Footer'
+import { toast } from 'react-toastify'
 
 export const Home = () => {
   const [load, setLoad] = useState(false)
@@ -25,12 +26,14 @@ export const Home = () => {
       setLoad(true)
       const response = await Api.get('/planets/1')
       if (response.data) {
+        toast.success("Planeta encontrado!")
         setData(response.data)
         setLoad(false)
         return
       }
     } catch (error) {
       setLoad(false)
+      toast.error("Planeta não encontrado, tente novamente!")
       console.error(error)
     }
   }
@@ -97,19 +100,11 @@ export const Home = () => {
           )
         }
 
-        {load && <Loading />}
-
-
-
-
-
       </S.Container>
-      <S.Footer>
-        <p>STARUARS LTDA | CNPJ: 77.777.777/0007-07 | 2023 | Todos os direitos reservados</p>
-        <S.Divider />
-        <img src={Logo} alt="" />
-      </S.Footer>
 
+      <Footer />
+
+      {load && <Loading />}
 
     </S.Wrapper>
   )

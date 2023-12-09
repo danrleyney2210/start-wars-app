@@ -1,10 +1,10 @@
 import * as S from './styles'
-import Planet from '../../assets/svg/world.svg'
-import Thermometer from '../../assets/icons/thermometer.svg'
-import Montain from '../../assets/icons/montain.svg'
-import Audience from '../../assets/icons/audience.svg'
-import User from '../../assets/icons/user.svg'
-import Films from '../../assets/icons/films.svg'
+import Planet from '../../../assets/svg/world.svg'
+import Thermometer from '../../../assets/icons/thermometer.svg'
+import Montain from '../../../assets/icons/montain.svg'
+import Audience from '../../../assets/icons/audience.svg'
+import User from '../../../assets/icons/user.svg'
+import Films from '../../../assets/icons/films.svg'
 
 export const CardPlanet = () => {
   return (

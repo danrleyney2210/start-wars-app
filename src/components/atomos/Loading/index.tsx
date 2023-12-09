@@ -1,5 +1,5 @@
 import * as S from "./styles";
-import Load from "../../assets/svg/load.svg";
+import Load from "../../../assets/svg/load.svg";
 
 export function Loading() {
   return (
