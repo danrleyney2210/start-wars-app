@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   background-repeat: no-repeat, repeat;
   background-size: cover;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
 `;
 
 export const Container = styled.div`
@@ -30,6 +30,13 @@ export const Header = styled.div`
     color: #fff;
     text-transform: uppercase;
   }
+
+  @media (max-width: 850px) {
+    svg,
+    img {
+      width: 200px;
+    }
+  }
 `;
 
 export const Content = styled.div`
@@ -37,7 +44,7 @@ export const Content = styled.div`
   width: 100%;
   height: 402px;
   border-radius: 10px;
-
+  margin-bottom: 178px;
   background-color: rgb(0, 0, 0, 0.7);
   position: relative;
 
@@ -119,12 +126,13 @@ export const ContentInfo = styled.div`
   }
 `;
 
+export const SearchResult = styled.div``;
+
 export const Footer = styled.div`
   height: 86px;
   width: 100vw;
   background-color: #fff;
-  position: absolute;
-  bottom: 0;
+  /* margin-top: 178px; */
   display: flex;
   justify-content: center;
   gap: 60px;
@@ -177,5 +185,23 @@ export const Item = styled.div`
   span {
     color: #fff;
     font-size: 14px;
+  }
+`;
+
+export const ArrowBack = styled.div`
+  margin-top: 108px;
+  margin-bottom: 79px;
+  display: flex;
+  max-width: 592px;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 11px;
+  cursor: pointer;
+
+  span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
   }
 `;

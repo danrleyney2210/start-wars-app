@@ -1,16 +1,18 @@
 import * as S from './styled'
 
-interface IButtonPros {
+interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   text: string
   icon?: React.ReactNode
   variant?: 'primary' | 'secondary' | 'warning'
 }
 
-export const Button = ({ icon, text, variant }: IButtonPros) => {
+export const Button: React.FC<IButtonProps> = ({ icon, text, variant = 'primary', ...rest }) => {
   return (
-    <S.Button type='button' variant={variant}>
+    <S.Button type='button' variant={variant} {...rest}>
       {icon}
       {text}
     </S.Button>
   )
 }
+
+

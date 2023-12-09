@@ -49,7 +49,6 @@ export const CardPlanet = () => {
           </S.People>
         </S.Card>
 
-
         <S.Card>
           <S.Title>
             <img src={Films} alt="" />

@@ -12,6 +12,8 @@ export const Contianer = styled.div`
   border-radius: 10px;
   background-color: #fff;
   padding: 24px;
+
+  position: relative;
 `;
 
 export const Header = styled.div`
@@ -83,5 +85,22 @@ export const People = styled.div`
 
   p {
     font-size: 14px;
+  }
+`;
+
+export const ArrowBack = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  cursor: pointer;
+
+  position: absolute;
+  bottom: -90px;
+  right: 0;
+
+  span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
   }
 `;
