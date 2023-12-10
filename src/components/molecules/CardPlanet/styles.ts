@@ -20,11 +20,21 @@ export const Header = styled.div`
   display: flex;
   gap: 38px;
   margin-bottom: 24px;
+
+  @media (max-width: 550px) {
+    flex-direction: column;
+    gap: 0px;
+  }
 `;
 
 export const ContentPlanet = styled.div`
   display: flex;
   gap: 11px;
+
+  img {
+    width: 74px;
+    height: 74px;
+  }
 
   .planet-text {
     display: flex;
@@ -40,12 +50,20 @@ export const ContentPlanet = styled.div`
       text-transform: uppercase;
     }
   }
+
+  @media (max-width: 550px) {
+    align-items: center;
+  }
 `;
 
 export const Description = styled.div`
   display: flex;
   flex-direction: column;
   gap: 7px;
+
+  @media (max-width: 550px) {
+    margin-left: 85px;
+  }
 `;
 
 export const Item = styled.div`
@@ -83,7 +101,7 @@ export const People = styled.div`
   margin-top: 18px;
   width: 100%;
 
-  p {
+  span {
     font-size: 14px;
   }
 `;

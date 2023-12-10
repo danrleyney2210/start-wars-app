@@ -57,6 +57,7 @@ export const Home = () => {
           data ? (
             <S.SearchResult>
               <CardPlanet
+                films={data.films}
                 name={data.name}
                 climate={data.climate}
                 terrain={data.terrain}
