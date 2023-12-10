@@ -6,7 +6,8 @@ export const Wrapper = styled.div`
   background-repeat: no-repeat, repeat;
   background-size: cover;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
+  overflow-x: none;
 `;
 
 export const Container = styled.div`
@@ -143,6 +144,10 @@ export const Item = styled.div`
   gap: 7px;
   cursor: pointer;
 
+  .filter {
+    font-weight: 900;
+  }
+
   span {
     color: #fff;
     font-size: 14px;
@@ -164,5 +169,12 @@ export const ArrowBack = styled.div`
     font-size: 14px;
     font-weight: 500;
     color: #fff;
+  }
+
+  @media (max-width: 650px) {
+    padding-right: 2rem;
+    padding-left: 2rem;
+    margin-top: 37px;
+    margin-bottom: 37px;
   }
 `;

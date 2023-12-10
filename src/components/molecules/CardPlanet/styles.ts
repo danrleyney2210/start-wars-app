@@ -7,13 +7,16 @@ export const Wrapper = styled.div`
 `;
 
 export const Contianer = styled.div`
-  max-width: 592px;
-  width: 100%;
+  width: 592px;
   border-radius: 10px;
   background-color: #fff;
   padding: 24px;
-
   position: relative;
+
+  @media (max-width: 650px) {
+    max-width: 592px;
+    width: 100%;
+  }
 `;
 
 export const Header = styled.div`

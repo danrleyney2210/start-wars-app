@@ -6,31 +6,14 @@ import User from '../../../assets/icons/user.svg'
 import Films from '../../../assets/icons/films.svg'
 import { planetes } from './mock'
 import { useEffect, useState } from 'react'
-import { IFilms } from './types'
+import { ICardProps, IFilms, IResidents } from './types'
 
 
-
-interface ICardProps {
-  name: string
-  // rotation_period: string
-  // orbital_period: string
-  // diameter: string
-  climate: string
-  // gravity: string
-  terrain: string
-  // surface_water: string
-  population: string
-  // residents: Array<string>
-  films: Array<string>
-  // created: string
-  // edited: string
-  // url: string
-}
-
-
-
-export const CardPlanet = ({ name, climate, terrain, population, films }: ICardProps) => {
+export const CardPlanet = ({ name, climate, terrain, population, films, residents }: ICardProps) => {
   const [movies, setMovies] = useState<IFilms[]>([])
+  const [peoples, setPeoples] = useState<IResidents[]>([])
+  const [loadFilm, setLoadFilm] = useState(false)
+  const [loadResident, setLoadResident] = useState(false)
 
   function returnPlanetImage(name: string): string {
     const result = planetes.find(e => e.name === name)
@@ -39,6 +22,7 @@ export const CardPlanet = ({ name, climate, terrain, population, films }: ICardP
 
   async function listMovies(movies: Array<string>) {
     try {
+      setLoadFilm(true)
       const filmPromises = movies.map(async (film) => {
         const response = await fetch(film);
         return response.json();
@@ -46,18 +30,37 @@ export const CardPlanet = ({ name, climate, terrain, population, films }: ICardP
 
       const films = await Promise.all(filmPromises)
       setMovies(films)
-
+      setLoadFilm(false)
 
     } catch (error) {
       console.error("Error fetching movies:", error);
+      setLoadFilm(false)
       throw error;
     }
+  }
 
+  async function listResidents(residents: Array<string>) {
+    try {
+      setLoadResident(true)
+      const peoples = residents.map(async (p) => {
+        const response = await fetch(p);
+        return response.json();
+      });
 
+      const films = await Promise.all(peoples)
+      setPeoples(films)
+      setLoadResident(false)
+
+    } catch (error) {
+      console.error("Error fetching people:", error);
+      setLoadResident(false)
+      throw error;
+    }
   }
 
   useEffect(() => {
     films.length > 0 && listMovies(films)
+    residents.length > 0 && listResidents(residents)
   }, [])
 
   return (
@@ -97,7 +100,9 @@ export const CardPlanet = ({ name, climate, terrain, population, films }: ICardP
 
           <S.People>
             <span>
-              spaneople01 spaneople01 spaneople01 spaneople01 spaneople01 spaneople01 spaneople01 spaneople01 spaneople01 spaneople01 spaneople01 spaneople01 spaneople01 spaneople01
+              {listResidents.length > 0 && peoples.map(p => `${p.name}, `)}
+              {listResidents.length === 0 && !loadResident && 'Nenhum morador'}
+              {loadResident && 'Carregando...'}
             </span>
           </S.People>
         </S.Card>
@@ -105,12 +110,14 @@ export const CardPlanet = ({ name, climate, terrain, population, films }: ICardP
         <S.Card>
           <S.Title>
             <img src={Films} alt="" />
-            <p>Films ({movies.length}):</p>
+            <p>Films ({movies?.length}):</p>
           </S.Title>
 
           <S.People>
             <span>
               {movies.length > 0 && movies.map(m => `${m.title}, `)}
+              {movies.length === 0 && !loadFilm && 'Nenhum Filme'}
+              {loadFilm && 'Carregando...'}
             </span>
           </S.People>
         </S.Card>

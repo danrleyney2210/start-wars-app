@@ -43,6 +43,11 @@ export const Home = () => {
     }
   }
 
+  function goBack() {
+    setData(null)
+    setNameSearch('')
+  }
+
   return (
     <S.Wrapper>
 
@@ -57,13 +62,14 @@ export const Home = () => {
           data ? (
             <S.SearchResult>
               <CardPlanet
+                residents={data.residents}
                 films={data.films}
                 name={data.name}
                 climate={data.climate}
                 terrain={data.terrain}
                 population={data.population}
               />
-              <S.ArrowBack onClick={() => setData(null)}>
+              <S.ArrowBack onClick={() => goBack()}>
                 <img src={ArrowLeft} alt="" />
                 <span>Voltar</span>
               </S.ArrowBack>
@@ -92,7 +98,7 @@ export const Home = () => {
                   <S.Filter>
                     <S.Item>
                       <img src={Filter} alt='filter' />
-                      <span>Filter</span>
+                      <span className='filter'>Filter</span>
                     </S.Item>
                     <S.Item>
                       <img src={Arrow} alt="" />
