@@ -50,14 +50,11 @@ export const Home = () => {
 
   return (
     <S.Wrapper>
-
       <S.Container>
-
         <S.Header>
           <p>Planet search</p>
           <img src={StartWars} alt="" />
         </S.Header>
-
         {
           data ? (
             <S.SearchResult>
@@ -82,12 +79,10 @@ export const Home = () => {
               <S.Info>
                 <S.ContentInfo>
                   <p>Discover all the information about Planets of the Star Wars Saga</p>
-
                   <Input
                     value={nameSearch}
                     onChange={(e) => setNameSearch(e.target.value)}
                     placeholder='Enter the name in the planet'
-
                   />
                   <Button
                     text='Search'
@@ -109,7 +104,6 @@ export const Home = () => {
                       <span>Population</span>
                     </S.Item>
                   </S.Filter>
-
                 </S.ContentInfo>
               </S.Info>
               <img src={Weapon} alt="" className='weapon-img' />
@@ -118,11 +112,8 @@ export const Home = () => {
         }
 
       </S.Container>
-
       <Footer />
-
       {load && <Loading />}
-
     </S.Wrapper>
   )
 }
