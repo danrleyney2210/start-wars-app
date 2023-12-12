@@ -45,9 +45,11 @@ export const ContentPlanet = styled.div`
 
     p {
       font-size: 14px;
+      
     }
 
     h3 {
+      cursor: pointer;
       font-size: 18px;
       font-weight: 900;
       text-transform: uppercase;

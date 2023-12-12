@@ -7,13 +7,23 @@ import Films from '../../../assets/icons/films.svg'
 import { planetes } from './mock'
 import { useEffect, useState } from 'react'
 import { ICardProps, IFilms, IResidents } from './types'
+import { Modal } from 'components/atomos/Modal'
+import { Input } from 'components/atomos/Input'
+import { Button } from 'components/atomos/Button'
+import { useLocalStorage } from 'hooks/useLocalStorage'
+import { toast } from 'react-toastify'
 
 
 export const CardPlanet = ({ name, climate, terrain, population, films, residents }: ICardProps) => {
   const [movies, setMovies] = useState<IFilms[]>([])
+  const [planetName, setPlanetName] = useState(name)
+  const [isOpenEdit, setIsOpenEdit] = useState(false)
   const [peoples, setPeoples] = useState<IResidents[]>([])
   const [loadFilm, setLoadFilm] = useState(false)
   const [loadResident, setLoadResident] = useState(false)
+
+  const [storagePlane, setStoragePlanet] = useLocalStorage({ storageKey: '@namePlane', initialValue: '' });
+
 
   function returnPlanetImage(name: string): string {
     const result = planetes.find(e => e.name === name)
@@ -58,6 +68,13 @@ export const CardPlanet = ({ name, climate, terrain, population, films, resident
     }
   }
 
+  function editPlanetName() {
+    setStoragePlanet(planetName);
+    setPlanetName('')
+    setIsOpenEdit(false)
+    toast.success('Nome do planeta alterado com sucesso!')
+  }
+
   useEffect(() => {
     films.length > 0 && listMovies(films)
     residents.length > 0 && listResidents(residents)
@@ -72,7 +89,7 @@ export const CardPlanet = ({ name, climate, terrain, population, films, resident
             <img src={returnPlanetImage(name)} alt="" />
             <div className='planet-text'>
               <p>Planet:</p>
-              <h3>{name}</h3>
+              <h3 onClick={() => setIsOpenEdit(true)}>{storagePlane ? storagePlane : name}</h3>
             </div>
           </S.ContentPlanet>
 
@@ -123,6 +140,19 @@ export const CardPlanet = ({ name, climate, terrain, population, films, resident
         </S.Card>
       </S.Contianer>
 
+      <Modal isOpen={isOpenEdit} onClose={() => setIsOpenEdit(false)} >
+        <h1>Alterar Nome do planeta</h1>
+        <Input
+          value={planetName}
+          onChange={(e) => setPlanetName(e.target.value)}
+          placeholder={'Editar nome planeta'}
+        />
+        <Button
+          text='Alterar nome'
+          variant={'primary'}
+          onClick={() => { editPlanetName() }}
+        />
+      </Modal>
     </S.Wrapper>
   )
 }

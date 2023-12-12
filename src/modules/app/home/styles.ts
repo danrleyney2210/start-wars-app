@@ -18,6 +18,11 @@ export const Container = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 58px;
+
+  @media (max-width: 540px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 `;
 
 export const Header = styled.div`
@@ -88,7 +93,23 @@ export const Content = styled.div`
   }
 
   @media (max-width: 540px) {
-    margin: 0 1rem;
+    margin-bottom: 56px;
+
+    .weapon-img {
+      width: 250px;
+    }
+  }
+
+  @media (max-width: 407px) {
+    .weapon-img {
+      width: 220px;
+    }
+  }
+
+  @media (max-width: 382px) {
+    .weapon-img {
+      width: 200px;
+    }
   }
 `;
 
