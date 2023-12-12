@@ -75,11 +75,11 @@ https://www.figma.com/file/Z7rryquU677ifYXJIWCipC/Star-Wars?type=design&node-id=
 #### Mobile
 
 <h1 align="center">
-  <img alt="mobileResult" title="CoinSync" src=".github/homeMobile.png" />
+  <img alt="mobileResult" title="CoinSync" src=".github/homeMobile.png"  width="200" hight="500" />
 </h1>
 
 <h1 align="center">
-  <img alt="mobileResult" title="CoinSync" src=".github/resultMobile.png" />
+  <img alt="mobileResult" title="CoinSync" src=".github/resultMobile.png"  width="200" hight="500" />
 </h1>
 
 ### Teste automatizado de Pesqusia de planeta com Cypress
@@ -93,7 +93,6 @@ https://www.figma.com/file/Z7rryquU677ifYXJIWCipC/Star-Wars?type=design&node-id=
   <source src=".github/teste.mp4" type="video/mp4">
   Seu navegador não suporta o elemento de vídeo.
 </video>
-
 
 ## Como executar o projeto ? 🚀
 
