@@ -72,13 +72,27 @@ https://www.figma.com/file/Z7rryquU677ifYXJIWCipC/Star-Wars?type=design&node-id=
   <img alt="ResutlPlanet" title="CoinSync" src=".github/resultPlanet.png" />
 </h1>
 
+
+> Caso queira editar o nome do planeta, clique em cima do nome e aparecerá um modal para ser efetuado a mudança.
+
+> Para este caso de uso foi criado um hook chamado useLocaStoarage para persistir os dados localmente. 
+
+<h1 align="center">
+  <img alt="ResutlPlanet" title="CoinSync" src=".github/editar.png" />
+</h1>
+
+## Caso queira efetuar a pesquisa por população clique em cima do nome população
+
+<h1 align="center">
+  <img alt="ResutlPlanet" title="CoinSync" src=".github/population.png" />
+</h1>
+
+
+
 #### Mobile
 
 <h1 align="center">
   <img alt="mobileResult" title="CoinSync" src=".github/homeMobile.png"  width="200" hight="500" />
-</h1>
-
-<h1 align="center">
   <img alt="mobileResult" title="CoinSync" src=".github/resultMobile.png"  width="200" hight="500" />
 </h1>
 
@@ -87,12 +101,18 @@ https://www.figma.com/file/Z7rryquU677ifYXJIWCipC/Star-Wars?type=design&node-id=
 * Para executar o cyprees execute o comando :
 > npx cypress open
 
+ - Alguns teste realizados : 
+ * Verificar mensagens de feedback para usuário caso o planeta não seja encontrado
+ * Verificar resultado da pesquisa
+ * Verificar Edição do nome do planeta
+
+<img alt="TesteCypress" title="Teste" src=".github/cypress.png" />
+
+
 > Teste realizado para pesquisar planeta.
 
-<video width="" height="" controls>
-  <source src=".github/teste.mp4" type="video/mp4">
-  Seu navegador não suporta o elemento de vídeo.
-</video>
+<img alt="Teste" title="Teste" src=".github/teste.gif" />
+
 
 ## Como executar o projeto ? 🚀
 

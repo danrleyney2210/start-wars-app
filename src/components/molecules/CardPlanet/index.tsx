@@ -16,7 +16,7 @@ import { toast } from 'react-toastify'
 
 export const CardPlanet = ({ name, climate, terrain, population, films, residents }: ICardProps) => {
   const [movies, setMovies] = useState<IFilms[]>([])
-  const [planetName, setPlanetName] = useState(name)
+  const [planetName, setPlanetName] = useState('')
   const [isOpenEdit, setIsOpenEdit] = useState(false)
   const [peoples, setPeoples] = useState<IResidents[]>([])
   const [loadFilm, setLoadFilm] = useState(false)
@@ -89,7 +89,10 @@ export const CardPlanet = ({ name, climate, terrain, population, films, resident
             <img src={returnPlanetImage(name)} alt="" />
             <div className='planet-text'>
               <p>Planet:</p>
-              <h3 onClick={() => setIsOpenEdit(true)}>{storagePlane ? storagePlane : name}</h3>
+              <h3
+                onClick={() => setIsOpenEdit(true)}
+                id='namePlane'
+              >{storagePlane ? storagePlane : name}</h3>
             </div>
           </S.ContentPlanet>
 
@@ -143,6 +146,7 @@ export const CardPlanet = ({ name, climate, terrain, population, films, resident
       <Modal isOpen={isOpenEdit} onClose={() => setIsOpenEdit(false)} >
         <h1>Alterar Nome do planeta</h1>
         <Input
+          id='editPlanetName'
           value={planetName}
           onChange={(e) => setPlanetName(e.target.value)}
           placeholder={'Editar nome planeta'}

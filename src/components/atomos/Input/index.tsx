@@ -7,7 +7,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 
 export const Input: React.FC<InputProps> = ({ label, value, ...rest }) => {
   return (
-    <S.Wrapper>
+    <S.Wrapper >
       {label && <label>{label}</label>}
       <input type="text" value={value} {...rest} />
     </S.Wrapper>
