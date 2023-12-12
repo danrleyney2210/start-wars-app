@@ -1,13 +1,15 @@
 ## Desafio Técnico: Aplicativo de Informações sobre Planetas de Star Wars
 
-### Descrição:
+> Status: concluído 🚀
+
+### Descrição: 💻 Sobre o desafio
 
 Crie um aplicativo da web React que permite aos usuários buscar informações sobre planetas da saga Star Wars usando a API pública do Star Wars (SWAPI). O aplicativo deve permitir que os usuários possam buscar pelo nome de um planeta e, em seguida, exiba informações detalhadas sobre esse planeta, incluindo nome, clima, terreno, população, filmes em que apareceu e residentes (caso haja).
 
 ### Requisitos Funcionais:
 
 - Interface de Busca:
-  > Faça filtro por: nome e população.
+  > Faça filtro por: nome e população. 
 - Chamada de API:
   > Faça uma chamada à API pública do Star Wars (SWAPI) para obter informações sobre o planeta
   > inserido pelo usuário.
@@ -46,8 +48,115 @@ O objetivo deste desafio é avaliar a capacidade do desenvolvedor de trabalhar c
 manipular dados e criar uma experiência de usuário agradável. Avaliamos seu código, implementações
 utilizadas, design e funcionalidade e performance geral do aplicativo.
 
-### Design
+### 🔖 Design/Layout
 
 Abaixo segue o Design e também o link para o figma do mesmo.
 https://www.figma.com/file/Z7rryquU677ifYXJIWCipC/Star-Wars?type=design&node-id=0%3A1&mode=design&t
 =nGI8aWVhNX6L3EBh-1
+
+### Tecnologias Usadas
+
+- React
+- Typescript
+- Cypress
+
+#### 🎨 Layout Desktop
+
+<h1 align="center">
+  <img alt="StarWars" title="CoinSync" src=".github/homeStarWars.png" />
+</h1>
+
+> Resultado da pesquisa por Nome ou por População
+
+<h1 align="center">
+  <img alt="ResutlPlanet" title="CoinSync" src=".github/resultPlanet.png" />
+</h1>
+
+#### Mobile
+
+<h1 align="center">
+  <img alt="mobileResult" title="CoinSync" src=".github/homeMobile.png" />
+</h1>
+
+<h1 align="center">
+  <img alt="mobileResult" title="CoinSync" src=".github/resultMobile.png" />
+</h1>
+
+### Teste automatizado de Pesqusia de planeta com Cypress
+
+* Para executar o cyprees execute o comando :
+> npx cypress open
+
+> Teste realizado para pesquisar planeta.
+
+<video width="" height="" controls>
+  <source src=".github/teste.mp4" type="video/mp4">
+  Seu navegador não suporta o elemento de vídeo.
+</video>
+
+
+## Como executar o projeto ? 🚀
+
+
+> Clone este repositório :
+
+1 - git clone git@github.com:danrleyney2210/start-wars-app.git
+
+2 - Acesse a pasta do projeto no seu terminal/cmd:
+
+> cd start-wars-app
+
+3 - check se esta na banch master - Instale as dependências :
+
+> **yarn** ou **npm install**
+
+4 - Execute a aplicação
+
+> **yarn start** ou **npm run start**
+
+#### Comandos para build
+
+> yarn build
+
+# 🛠 Tecnologias
+
+> Principais dependências usadas no projeto: 🔥
+
+- Website (React + RCA + Typescript)
+
+- React Icons - Biblioteca de icones.
+
+- Styled Components - CSS-in-js
+
+- Prettier - Formatador de código opinativo.
+
+- Cypress - Para testes automatizado e testes em library.
+
+- Eslint - Ferramenta para identificar e relatar os padrões encontrados no código ECMAScript /
+  JavaScript, com o objetivo de tornar o código mais consistente e evitar bugs.
+
+- Axios - Cliente HTTP baseado em promessa para node. jse o navegador.
+
+- react-toastify - Para Feedback e alertas personalizados.
+
+Veja o arquivo <a>package.json</a>
+
+> Utilitários
+
+- Protótipo: Figma
+- Editor: Visual Studio Code
+
+---
+
+### 🦸 Desenvolvedor 🤘
+
+<img width="120" src=".github/eu.png"/>
+
+Feito com ❤️ por Danrley Ney 👋🏽 Entre em contato!
+
+> Email: danrley.dev@gmail.com
+
+> www.danrley.dev
+
+> Twitter: @danrleyney
+

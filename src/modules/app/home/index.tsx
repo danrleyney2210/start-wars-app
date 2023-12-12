@@ -89,6 +89,7 @@ export const Home = () => {
                   <S.ContentInfo>
                     <p>Discover all the information about Planets of the Star Wars Saga</p>
                     <Input
+                      id='searchPlanet'
                       value={valueSearch}
                       onChange={(e) => setValueSearch(e.target.value)}
                       placeholder={`Enter the ${typeFilter} in the planet`}
@@ -106,6 +107,7 @@ export const Home = () => {
                       </S.Item>
                       <S.Item>
                         <RadioInput
+                          id='name'
                           text='Name'
                           name='filter'
                           onChange={handleRadioChange}
@@ -114,6 +116,7 @@ export const Home = () => {
                       </S.Item>
                       <S.Item>
                         <RadioInput
+                          id='population'
                           text='Population'
                           name='filter'
                           onChange={handleRadioChange}
