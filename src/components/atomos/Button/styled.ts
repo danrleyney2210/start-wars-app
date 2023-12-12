@@ -16,8 +16,7 @@ export const Button = styled.button<Tprops>`
   cursor: pointer;
   font-weight: ${(props) => props.theme.font.weight.strong};
 
-  background-color: ${(props) =>
-    props.variant === "primary" ? "#DE1212" : "#ddd"};
+  background-color: ${(props) => (props.variant === "primary" ? "#DE1212" : "#ddd")};
 
   height: 40px;
   color: #fff;

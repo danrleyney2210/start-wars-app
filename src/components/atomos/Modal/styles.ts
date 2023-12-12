@@ -1,6 +1,6 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
-export const Wrapper = styled.div``
+export const Wrapper = styled.div``;
 
 export const WrapperModal = styled.div`
   position: fixed;
@@ -12,7 +12,7 @@ export const WrapperModal = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`
+`;
 
 export const ModalContent = styled.div`
   max-width: 530px;
@@ -23,16 +23,16 @@ export const ModalContent = styled.div`
   position: absolute;
   border-radius: 4px;
   z-index: 2;
-`
+`;
 
 export const ContentClose = styled.div`
   position: absolute;
   top: 28px;
   right: 28px;
   cursor: pointer;
-`
+`;
 
 export const Overlay = styled.div`
   height: 100vh;
   width: 100vw;
-`
+`;

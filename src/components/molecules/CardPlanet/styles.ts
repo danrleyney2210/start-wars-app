@@ -45,7 +45,6 @@ export const ContentPlanet = styled.div`
 
     p {
       font-size: 14px;
-      
     }
 
     h3 {

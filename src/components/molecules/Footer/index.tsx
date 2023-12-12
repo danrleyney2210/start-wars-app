@@ -1,6 +1,5 @@
-import * as S from './styles'
-import Logo from '../../../assets/svg/logo.svg'
-
+import Logo from "../../../assets/svg/logo.svg";
+import * as S from "./styles";
 
 export const Footer = () => {
   return (
@@ -9,5 +8,5 @@ export const Footer = () => {
       <S.Divider />
       <img src={Logo} alt="" />
     </S.Footer>
-  )
-}
+  );
+};

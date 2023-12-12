@@ -1,10 +1,11 @@
-import * as S from './styles'
 import { IoCloseOutline } from "react-icons/io5";
 
+import * as S from "./styles";
+
 interface IModalProps {
-  onClose: () => void
-  isOpen: boolean
-  children?: React.ReactNode
+  onClose: () => void;
+  isOpen: boolean;
+  children?: React.ReactNode;
 }
 
 export const Modal = ({ isOpen, onClose, children }: IModalProps) => {
@@ -22,5 +23,5 @@ export const Modal = ({ isOpen, onClose, children }: IModalProps) => {
         </S.WrapperModal>
       )}
     </S.Wrapper>
-  )
-}
+  );
+};

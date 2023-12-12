@@ -1,7 +1,8 @@
 import { ThemeProvider } from "styled-components";
-import Routes from './routes';
 import { GlobalStyle } from "styles/global";
 import theme from "styles/theme";
+
+import Routes from "./routes";
 
 export function App() {
   return (
@@ -9,6 +10,5 @@ export function App() {
       <GlobalStyle />
       <Routes />
     </ThemeProvider>
-  )
+  );
 }
-

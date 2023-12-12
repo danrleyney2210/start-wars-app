@@ -15,14 +15,17 @@ export const useLocalStorage = ({ storageKey, initialValue }: IUseLocalStoragePr
     }
   });
 
-  const setValue = useCallback((value: string) => {
-    try {
-      setState(value);
-      localStorage.setItem(storageKey, JSON.stringify(value));
-    } catch (error) {
-      console.error(error);
-    }
-  }, [storageKey]);
+  const setValue = useCallback(
+    (value: string) => {
+      try {
+        setState(value);
+        localStorage.setItem(storageKey, JSON.stringify(value));
+      } catch (error) {
+        console.error(error);
+      }
+    },
+    [storageKey]
+  );
 
   return [state, setValue] as const;
 };
