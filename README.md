@@ -71,6 +71,8 @@ https://www.figma.com/file/Z7rryquU677ifYXJIWCipC/Star-Wars?type=design&node-id=
 
 > https://start-wars-app.vercel.app/
 
+### Observação : É recomenda baixar o projeto e executar localmente, pois a API fornecida está bloqueado as requisições
+
 #### 🎨 Layout Desktop
 
 <h1 align="center">
