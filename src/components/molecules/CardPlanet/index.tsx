@@ -1,3 +1,8 @@
+import Audience from "assets/icons/audience.svg";
+import Films from "assets/icons/films.svg";
+import Montain from "assets/icons/montain.svg";
+import Thermometer from "assets/icons/thermometer.svg";
+import User from "assets/icons/user.svg";
 import { Button } from "components/atomos/Button";
 import { Input } from "components/atomos/Input";
 import { Modal } from "components/atomos/Modal";
@@ -5,11 +10,6 @@ import { useLocalStorage } from "hooks/useLocalStorage";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 
-import Audience from "../../../assets/icons/audience.svg";
-import Films from "../../../assets/icons/films.svg";
-import Montain from "../../../assets/icons/montain.svg";
-import Thermometer from "../../../assets/icons/thermometer.svg";
-import User from "../../../assets/icons/user.svg";
 import { planetes } from "./mock";
 import * as S from "./styles";
 import { ICardProps, IFilms, IResidents } from "./types";

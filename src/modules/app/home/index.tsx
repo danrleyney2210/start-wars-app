@@ -1,19 +1,16 @@
-import { Button } from "components/atomos/Button";
-import { Input } from "components/atomos/Input";
-import { Loading } from "components/atomos/Loading";
-import { RadioInput } from "components/atomos/RadioInput";
-import { CardPlanet } from "components/molecules/CardPlanet";
-import { Footer } from "components/molecules/Footer";
+// import { Button } from "@components/atomos/Button";
+import ArrowLeft from "assets/icons/arrowLeft.svg";
+import Filter from "assets/icons/setting.svg";
+import Planet from "assets/image/planet.png";
+import Search from "assets/svg/search.svg";
+import StartWars from "assets/svg/starWars.svg";
+import Weapon from "assets/svg/Weapon.svg";
+import { Button, Input, Loading, RadioInput } from "components/atomos";
+import { CardPlanet, Footer } from "components/molecules";
 import { ChangeEvent, useState } from "react";
 import { toast } from "react-toastify";
 import Api from "service/api";
 
-import ArrowLeft from "../../../assets/icons/arrowLeft.svg";
-import Filter from "../../../assets/icons/setting.svg";
-import Planet from "../../../assets/image/planet.png";
-import Search from "../../../assets/svg/search.svg";
-import StartWars from "../../../assets/svg/starWars.svg";
-import Weapon from "../../../assets/svg/Weapon.svg";
 import * as S from "./styles";
 import { IPlanet } from "./types";
 
