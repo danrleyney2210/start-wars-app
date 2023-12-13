@@ -118,6 +118,7 @@ https://www.figma.com/file/Z7rryquU677ifYXJIWCipC/Star-Wars?type=design&node-id=
 - Verificar mensagens de feedback para usuário caso o planeta não seja encontrado
 - Verificar resultado da pesquisa
 - Verificar Edição do nome do planeta
+- Verificar se o tipo de pesquisa por nome ou população selecionada está funcionando
 
 <img alt="TesteCypress" title="Teste" src=".github/cypress.png" />
 
