@@ -2,9 +2,10 @@ import styled from "styled-components";
 
 export const Footer = styled.div`
   height: 86px;
-  width: 100vw;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
   background-color: #fff;
-  /* margin-top: 178px; */
   display: flex;
   justify-content: center;
   gap: 60px;

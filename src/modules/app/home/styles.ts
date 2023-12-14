@@ -6,9 +6,10 @@ export const Wrapper = styled.div`
   background-image: url(${bg});
   background-repeat: no-repeat, repeat;
   background-size: cover;
-  width: 100vw;
-  height: 100%;
-  overflow-x: none;
+  width: 100%;
+  height: 100vh;
+
+  overflow: hidden;
 `;
 
 export const Container = styled.div`
