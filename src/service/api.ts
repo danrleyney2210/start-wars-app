@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const Api = axios.create({
-  baseURL: "http://swapi.dev/api",
+  baseURL: "https://swapi.dev/api",
   headers: {
     "Content-Type": "application/json",
   },
