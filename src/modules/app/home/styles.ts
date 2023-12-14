@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 import bg from "../../../assets/svg/bg.svg";
 
 export const Wrapper = styled.div`
