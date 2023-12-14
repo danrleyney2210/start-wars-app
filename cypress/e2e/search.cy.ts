@@ -3,6 +3,5 @@ describe("Search with correct planet name", () => {
     cy.visit("http://localhost:3000/");
     cy.get("#searchPlanet").type("Alderaan");
     cy.contains("Search").click();
-
   });
 });

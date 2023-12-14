@@ -4,8 +4,8 @@ describe("Search with correct planet name", () => {
     cy.get("#searchPlanet").type("Alderaan");
     cy.contains("Search").click();
 
-    cy.get('#namePlane').click()
-     cy.get("#editPlanetName").type("Teste");
-      cy.contains("Alterar nome").click();
+    cy.get("#namePlane").click();
+    cy.get("#editPlanetName").type("Teste");
+    cy.contains("Alterar nome").click();
   });
 });
