@@ -3,8 +3,6 @@ import styled from "styled-components";
 export const Footer = styled.div`
   height: 86px;
   width: 100%;
-  position: fixed;
-  bottom: 0;
   background-color: #fff;
   display: flex;
   justify-content: center;

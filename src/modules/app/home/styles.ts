@@ -6,13 +6,11 @@ export const Wrapper = styled.div`
   background-image: url(${bg});
   background-repeat: no-repeat, repeat;
   background-size: cover;
-  width: 100%;
-  height: 100vh;
 `;
 
 export const Container = styled.div`
   padding-top: 75px;
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
