@@ -10,7 +10,6 @@ possam buscar pelo nome de um planeta e, em seguida, exiba informações detalha
 planeta, incluindo nome, clima, terreno, população, filmes em que apareceu e residentes (caso haja).
 
 ### Requisitos Funcionais:
-
 - Interface de Busca:
   > Faça filtro por: nome e população. ✅
 - Chamada de API:
@@ -60,11 +59,9 @@ https://www.figma.com/file/Z7rryquU677ifYXJIWCipC/Star-Wars?type=design&node-id=
 =nGI8aWVhNX6L3EBh-1
 
 ### Tecnologias Usadas
-
 - React
 - Typescript
 - Cypress
-
 ###
 
 ### link de homologação
